@@ -1,13 +1,12 @@
-import React from "react";
-import SignUpForm from "../../components/SignUpForm/SignUpForm";
-import LoginForm from "../../components/LoginForm/LoginForm";
+import SignUpForm from '../../components/SignUpForm/SignUpForm';
+import LogInForm from '../../components/LogInForm/LogInForm';
 
 export default function AuthPage({ setUser }) {
-    return  (
+    return (
         <main>
             <h1>AuthPage</h1>
-            <SignUpForm setUser={setUser} />
-            <LoginForm setUser={setUser} />
-        </main> 
+            <SignUpForm setUser = { setUser } />
+            <LogInForm setUser = { setUser } />
+        </main>
     )
 }
