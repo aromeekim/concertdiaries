@@ -11,6 +11,7 @@ export default function ArtistListPage(props) {
           <ArtistListItem
             artist={artist}
             key={artist._id}
+            handleDeleteArtist={props.handleDeleteArtist}
           />
         )}
       </div>

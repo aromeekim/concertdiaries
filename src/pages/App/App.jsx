@@ -8,11 +8,16 @@ import * as artistAPI from "../../services/artists-api";
 import ArtistListPage from "../ArtistListPage/ArtistListPage";
 import AddArtistPage from "../AddArtistPage/AddArtistPage"; 
 import ArtistDetailPage from "../ArtistDetailPage/ArtistDetailPage";
+import EditArtistPage from "../EditArtistPage/EditArtistPage";
 
-export default function App() {
+export default function App(props) {
   const [user, setUser] = useState(getUser());
   const [artists, setArtists] = useState([]);
   const history = useHistory();
+
+  useEffect(() => {
+    history.push('/')
+  }, [artists, history]);
 
   useEffect(() => {
 	async function getArtists(){
@@ -20,16 +25,26 @@ export default function App() {
 	  setArtists(artists);
 	}
 	getArtists();
-  }, [])
+  }, []);
 
-  useEffect(() => {
-	  history.push('/')
-  }, [artists, history])
 
   async function handleAddArtist (newArtistData) {
 	  const newArtist = await artistAPI.create(newArtistData);
 	  setArtists([...artists, newArtist])
   }
+
+  async function handleUpdateArtist (updatedArtistData) {
+    const updatedArtist = await artistAPI.update(updatedArtistData);
+    const newArtistsArray = artists.map(a => a._id +++ updatedArtist._id ? updatedArtist : a
+    );
+    setArtists(newArtistsArray);
+  }
+
+  async function handleDeleteArtist(id) {
+		console.log(id);
+		await artistAPI.deleteOne(id);
+		setArtists(artists.filter(artist => artist._id !== id));
+	}
 
   return (
     <main className="App">
@@ -43,8 +58,11 @@ export default function App() {
 			  <ArtistDetailPage />
 		  </Route>
 		  <Route exact path="/artists">
-			  <ArtistListPage artists = { artists } />
+			  <ArtistListPage artists = { artists } handleDeleteArtist = { handleDeleteArtist } />
 		  </Route>
+      <Route exact path="/artists/edit">
+        <EditArtistPage handleUpdateArtist = { handleUpdateArtist } />
+      </Route>
           <Redirect to="/artists" />
       </>
       :

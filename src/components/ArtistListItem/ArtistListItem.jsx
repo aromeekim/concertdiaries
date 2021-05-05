@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 //import './ArtistListItem.css';
 
-export default function ArtistListItem({ artist }) { 
+export default function ArtistListItem({ artist, handleDeleteArtist }) { 
   return (
     <div className='panel panel-default'>
       <div className="panel-heading">
@@ -29,6 +29,7 @@ export default function ArtistListItem({ artist }) {
         </Link>
         <button
           className='btn btn-xs btn-danger margin-left-10'
+          onClick={() => handleDeleteArtist(artist._id)}
         >
           DELETE
         </button>
