@@ -1,5 +1,5 @@
 import React from 'react';
-import UserCard from '../../components/UserCard/UserCard';
+import UserCard from '../../Components/UserCard/UserCard';
 import { useLocation } from 'react-router-dom';
 import './UserProfilePage.css';
 
