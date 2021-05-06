@@ -10,6 +10,11 @@ input[type=text] {
     color: #FFFFFF
 }
 
+input[type=password] {
+    background-color: #000000;
+    color: #FFFFFF
+}
+
 select {
     width: 15%;
     padding: 5px;

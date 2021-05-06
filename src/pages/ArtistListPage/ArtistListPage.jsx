@@ -1,5 +1,5 @@
 import React from 'react';
-import ArtistListItem from '../../components/ArtistListItem/ArtistListItem';
+import ArtistListItem from '../../Components/ArtistListItem/ArtistListItem';
 // import './PuppyListPage.css';
 
 export default function ArtistListPage(props) {

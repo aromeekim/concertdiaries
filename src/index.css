@@ -2,6 +2,7 @@ body {
   background-image: url("images/backdrop.jpeg");
   background-color: black;
   color: #FFFFFF;
+  text-align: center;
 }
 
 h1 {
@@ -14,4 +15,10 @@ button {
   border: none;
   color: #FFFFFF;
   border-radius: 5px;
+}
+
+div {
+  margin: 10px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
 }
