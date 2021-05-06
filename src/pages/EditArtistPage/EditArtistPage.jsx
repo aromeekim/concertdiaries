@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import {Link, useLocation} from 'react-router-dom';
+import './EditArtistPage.css';
 
 export default function EditArtistPage(props){
 
@@ -31,8 +32,9 @@ export default function EditArtistPage(props){
       <h1>Edit Artist</h1>
       <form ref={formRef} autoComplete="off" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Artist</label>
-          <input
+          <label>Artist: </label>
+          <input 
+            type="text"
             className="form-control"
             name="name"
             value={ formData.name}
@@ -41,8 +43,9 @@ export default function EditArtistPage(props){
           />
         </div>
         <div className="form-group">
-          <label>Genre</label>
+          <label>Genre: </label>
           <input
+            type="text"
             className="form-control"
             name="genre"
             value={ formData.genre}
@@ -51,8 +54,9 @@ export default function EditArtistPage(props){
           />
         </div>
         <div className="form-group">
-          <label>Venue</label>
+          <label>Venue: </label>
           <input
+            type="text"
             className="form-control"
             name="venue"
             value={ formData.venue}
@@ -61,8 +65,9 @@ export default function EditArtistPage(props){
           />
         </div>
         <div className="form-group">
-          <label>City/State</label>
+          <label>City/State: </label>
           <input
+            type="text"
             className="form-control"
             name="city"
             value={ formData.city}
@@ -70,8 +75,9 @@ export default function EditArtistPage(props){
           />
         </div>
         <div className="form-group">
-          <label>Date Seen</label>
+          <label>Date Seen: </label>
           <input
+            type="text"
             className="form-control"
             name="date"
             value={ formData.date}
@@ -79,7 +85,7 @@ export default function EditArtistPage(props){
           />
         </div>
         <div className="form-group">
-          <label>Rating</label>
+          <label>Rating: </label>
           <select 
             className="form-control"
             name="rating"
