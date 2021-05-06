@@ -36,3 +36,4 @@ module.exports = {
     const deletedArtist = await Artist.findByIdAndDelete(req.params.id);
     res.status(200).json(deletedArtist);
   }
+  
