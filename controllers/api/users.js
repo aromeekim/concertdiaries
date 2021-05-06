@@ -3,14 +3,20 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
 module.exports = {
+    index,
     create,
     logIn,
     checkToken
   };
-  
+
   function checkToken(req, res) {
   console.log('req.user', req.user);
   res.json(req.exp);
+}
+
+async function index(req, res) {
+  const user = await User.find({});
+  res.status(200).json(user);
 }
   
   async function create(req, res) {

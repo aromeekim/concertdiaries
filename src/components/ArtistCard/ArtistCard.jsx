@@ -23,7 +23,7 @@ export default function ArtistCard({artist}) {
         </dl>
       </div>
       <div className='panel-footer'>
-        <Link to='/'>RETURN TO LIST</Link>
+        <Link to='/artists'>RETURN TO LIST</Link>
       </div>
     </div>
   );

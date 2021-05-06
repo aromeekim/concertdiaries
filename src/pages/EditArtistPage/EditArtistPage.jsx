@@ -57,6 +57,7 @@ export default function EditArtistPage(props){
             name="venue"
             value={ formData.venue}
             onChange={ handleChange}
+            required
           />
         </div>
         <div className="form-group">

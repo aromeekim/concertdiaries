@@ -18,6 +18,7 @@ export default function ArtistListItem({ artist, handleDeleteArtist }) {
         >
           DETAILS
         </Link>
+        &nbsp; &nbsp;
         <Link
           className='btn btn-xs btn-warning'
           to={{

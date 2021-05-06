@@ -18,6 +18,18 @@ const userSchema = new Schema({
       trim: true,
       minLength: 3,
       required: true
+    },
+    location: {
+      type: String,
+      required: false
+    },
+    fave: {
+      type: String,
+      required: false
+    },
+    dream: {
+      type: String,
+      required: false
     }
   }, {
     timestamps: true,

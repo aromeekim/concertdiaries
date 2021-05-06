@@ -29,3 +29,8 @@ export function signUp(userData) {
     if (res.ok) return res.json();
     throw new Error('Bad Request');
   }
+
+  export function getAll() {
+    return fetch(BASE_URL)
+    .then(res => res.json());
+  }

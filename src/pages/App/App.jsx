@@ -16,7 +16,7 @@ export default function App(props) {
   const history = useHistory();
 
   useEffect(() => {
-    history.push('/')
+    history.push('/artists')
   }, [artists, history]);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export default function App(props) {
 
   async function handleUpdateArtist (updatedArtistData) {
     const updatedArtist = await artistAPI.update(updatedArtistData);
-    const newArtistsArray = artists.map(a => a._id +++ updatedArtist._id ? updatedArtist : a
+    const newArtistsArray = artists.map(a => a._id === updatedArtist._id ? updatedArtist : a
     );
     setArtists(newArtistsArray);
   }
