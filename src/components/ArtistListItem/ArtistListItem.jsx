@@ -16,7 +16,9 @@ export default function ArtistListItem({ artist, handleDeleteArtist }) {
             state: { artist }
           }}
         >
+          <button>
           DETAILS
+          </button>
         </Link>
         &nbsp; &nbsp;
         <Link
@@ -26,8 +28,11 @@ export default function ArtistListItem({ artist, handleDeleteArtist }) {
             state: { artist }
           }}
         >
+          <button>
           EDIT
+          </button>
         </Link>
+        &nbsp; &nbsp;
         <button
           className='btn btn-xs btn-danger margin-left-10'
           onClick={() => handleDeleteArtist(artist._id)}

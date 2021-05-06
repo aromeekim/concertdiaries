@@ -51,6 +51,7 @@ export default function App(props) {
     { user ?
       <>
         <NavBar user = { user } setUser = { setUser } />
+        <h1>Concert Tracker</h1>
 		  <Route exact path="/artists/add">
 			  <AddArtistPage handleAddArtist = { handleAddArtist } />
 		  </Route>

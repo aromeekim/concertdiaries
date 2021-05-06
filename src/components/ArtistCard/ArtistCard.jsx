@@ -8,22 +8,16 @@ export default function ArtistCard({artist}) {
       </div>
       <div className='panel-body'>
         <dl>
-          <dt>Genre</dt>
-          <dd>{artist.genre}</dd>
-          <dt>Venue</dt>
-          <dd>{artist.venue}</dd>
-          <dt>City/State</dt>
-          <dd>{artist.city}</dd>
-          <dt>Date Seen</dt>
-          <dd>{artist.date}</dd>
-          <dt>Performance Rating</dt>
-          <dd>{artist.rating}</dd>
-          <dt>Additional Thoughts</dt>
-          <dd>{artist.thoughts}</dd>
+          <dt>Genre: {artist.genre}</dt>
+          <dt>Venue: {artist.venue}</dt>
+          <dt>City/State: {artist.city}</dt>
+          <dt>Date Seen: {artist.date}</dt>
+          <dt>Performance Rating: {artist.rating}</dt>
+          <dt>Additional Thoughts: {artist.thoughts}</dt>
         </dl>
       </div>
       <div className='panel-footer'>
-        <Link to='/artists'>RETURN TO LIST</Link>
+        <Link to='/artists'><button>RETURN TO LIST</button></Link>
       </div>
     </div>
   );

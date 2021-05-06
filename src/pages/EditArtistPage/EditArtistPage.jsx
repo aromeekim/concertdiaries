@@ -99,7 +99,7 @@ export default function EditArtistPage(props){
         >
           SAVE ARTIST 
         </button>&nbsp;&nbsp;
-        <Link to='/artists'>CANCEL</Link>
+        <Link to='/artists'><button>CANCEL</button></Link>
       </form>
     </>
   );
