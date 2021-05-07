@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-![Sign Up Page](src/images/signin.jpeg)
+![Sign Up Page](src/images/signup.jpeg)
 
 ![Log In Page](src/images/login.jpeg)
 
