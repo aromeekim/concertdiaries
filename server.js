@@ -22,6 +22,7 @@ app.listen(port, function () {
 });
 
 app.use('/api/users', require('./routes/api/users'));
+
 app.use('/api/artists', require('./routes/api/artists'));
 
 app.get('/*', function (req, res) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import ArtistCard from '../../Components/ArtistCard/ArtistCard';
+import ArtistCard from '../../components/ArtistCard/ArtistCard';
 import { useLocation } from 'react-router-dom';
 
 export default function ArtistDetailPage(props) {
