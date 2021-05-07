@@ -2,15 +2,15 @@
 
 ## Screenshots
 
-![Sign Up Form] [signup.jpeg]
+![Sign Up Page]["src/images/signin.jpeg"]
 
-![Log In Form] [login.jpeg]
+![Log In Page]["src/images/login.jpeg"]
 
-![Artist List] [artistlist.jpeg]
+![Artist List]["src/images/artistlist.jpeg"]
 
-![Artist Details] [details.jpeg]
+![Artist Details]["src/images/details.jpeg"]
 
-![Edit Artist] [edit.jpeg]
+![Edit Artist]["src/images/edit.jpeg"]
 
 ### Technologies Used
 
