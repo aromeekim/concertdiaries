@@ -5,7 +5,7 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
 router.get('/', artistsCtrl.index);
 router.post('/', ensureLoggedIn, artistsCtrl.create);
-router.get('/:id', ensureLoggedIn, artistsCtrl.show);
+router.get('/:id', artistsCtrl.show);
 router.put('/:id', ensureLoggedIn, artistsCtrl.update);
 router.delete('/:id', ensureLoggedIn, artistsCtrl.delete);
 
